@@ -64,3 +64,30 @@
     -webkit-text-fill-color: transparent;
     display: inline-block;
 }
+
+/* 🎉 Joyful Animation */
+.joyful {
+    animation: bounceGlow 2s infinite ease-in-out;
+}
+
+@keyframes bounceGlow {
+    0%, 100% { transform: translateY(0); text-shadow: 3px 3px 5px rgba(255, 105, 180, 0.5); }
+    50% { transform: translateY(-10px); text-shadow: 5px 5px 8px rgba(255, 182, 193, 0.8); }
+}
+
+/* 😭 Sad Animation */
+.sad {
+    animation: fadeSad 3s infinite ease-in-out, shake 1.5s infinite ease-in-out;
+}
+
+@keyframes fadeSad {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    50% { transform: translateX(2px); }
+    75% { transform: translateX(-1px); }
+}
